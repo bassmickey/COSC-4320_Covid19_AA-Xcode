@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		1D2300ED2744353900F03931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2300EC2744353900F03931 /* AppDelegate.swift */; };
 		1D2300EF2744353A00F03931 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2300EE2744353A00F03931 /* SceneDelegate.swift */; };
-		1D2300F12744353A00F03931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2300F02744353A00F03931 /* ViewController.swift */; };
+		1D2300F12744353A00F03931 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2300F02744353A00F03931 /* QuestionsViewController.swift */; };
 		1D2300F42744353A00F03931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D2300F22744353A00F03931 /* Main.storyboard */; };
 		1D2300F62744353D00F03931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D2300F52744353D00F03931 /* Assets.xcassets */; };
 		1D2300F92744353D00F03931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D2300F72744353D00F03931 /* LaunchScreen.storyboard */; };
+		1D7F975B27449FE700986A53 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F975A27449FE700986A53 /* Question.swift */; };
+		1D7F975D2744A36200986A53 /* QuestionnaireLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F975C2744A36200986A53 /* QuestionnaireLogic.swift */; };
+		1D7F975F2744DE7400986A53 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F975E2744DE7400986A53 /* GradientView.swift */; };
+		1D826A32274775350035ED82 /* DiagnosisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D826A31274775350035ED82 /* DiagnosisViewController.swift */; };
+		1DFBE4512748D2E100E9C938 /* RiskLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFBE4502748D2E100E9C938 /* RiskLevel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D2300E92744353900F03931 /* Covid-19_Questionnaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19_Questionnaire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2300EC2744353900F03931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D2300EE2744353A00F03931 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1D2300F02744353A00F03931 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D2300F02744353A00F03931 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		1D2300F32744353A00F03931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D2300F52744353D00F03931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D2300F82744353D00F03931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D2300FA2744353D00F03931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D7F975A27449FE700986A53 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1D7F975C2744A36200986A53 /* QuestionnaireLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireLogic.swift; sourceTree = "<group>"; };
+		1D7F975E2744DE7400986A53 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		1D826A31274775350035ED82 /* DiagnosisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisViewController.swift; sourceTree = "<group>"; };
+		1DFBE4502748D2E100E9C938 /* RiskLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,42 @@
 			children = (
 				1D2300EC2744353900F03931 /* AppDelegate.swift */,
 				1D2300EE2744353A00F03931 /* SceneDelegate.swift */,
-				1D2300F02744353A00F03931 /* ViewController.swift */,
-				1D2300F22744353A00F03931 /* Main.storyboard */,
+				1D2301002744370900F03931 /* Model */,
+				1D2301022744372B00F03931 /* Controller */,
+				1D2301012744371A00F03931 /* View */,
 				1D2300F52744353D00F03931 /* Assets.xcassets */,
-				1D2300F72744353D00F03931 /* LaunchScreen.storyboard */,
 				1D2300FA2744353D00F03931 /* Info.plist */,
 			);
 			path = "Covid-19_Questionnaire";
+			sourceTree = "<group>";
+		};
+		1D2301002744370900F03931 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F975A27449FE700986A53 /* Question.swift */,
+				1D7F975C2744A36200986A53 /* QuestionnaireLogic.swift */,
+				1DFBE4502748D2E100E9C938 /* RiskLevel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D2301012744371A00F03931 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D2300F72744353D00F03931 /* LaunchScreen.storyboard */,
+				1D2300F22744353A00F03931 /* Main.storyboard */,
+				1D7F975E2744DE7400986A53 /* GradientView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D2301022744372B00F03931 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D826A31274775350035ED82 /* DiagnosisViewController.swift */,
+				1D2300F02744353A00F03931 /* QuestionsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D2300F12744353A00F03931 /* ViewController.swift in Sources */,
+				1D2300F12744353A00F03931 /* QuestionsViewController.swift in Sources */,
+				1D826A32274775350035ED82 /* DiagnosisViewController.swift in Sources */,
+				1D7F975B27449FE700986A53 /* Question.swift in Sources */,
+				1DFBE4512748D2E100E9C938 /* RiskLevel.swift in Sources */,
+				1D7F975F2744DE7400986A53 /* GradientView.swift in Sources */,
+				1D7F975D2744A36200986A53 /* QuestionnaireLogic.swift in Sources */,
 				1D2300ED2744353900F03931 /* AppDelegate.swift in Sources */,
 				1D2300EF2744353A00F03931 /* SceneDelegate.swift in Sources */,
 			);
@@ -294,6 +338,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,6 +366,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
