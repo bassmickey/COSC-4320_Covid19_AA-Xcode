@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -171,7 +171,6 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X9Q-9z-BuN"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vbE-Gj-rje" firstAttribute="centerX" secondItem="0Kx-io-Fl4" secondAttribute="centerX" id="Etc-uN-Iyq"/>
                             <constraint firstItem="vbE-Gj-rje" firstAttribute="centerY" secondItem="0Kx-io-Fl4" secondAttribute="centerY" id="Px6-LJ-0on"/>
