@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D1D1957274DC7910004BCB1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D1956274DC7900004BCB1 /* SplashViewController.swift */; };
 		1D2300ED2744353900F03931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2300EC2744353900F03931 /* AppDelegate.swift */; };
 		1D2300EF2744353A00F03931 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2300EE2744353A00F03931 /* SceneDelegate.swift */; };
 		1D2300F12744353A00F03931 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2300F02744353A00F03931 /* QuestionsViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D1D1956274DC7900004BCB1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1D2300E92744353900F03931 /* Covid-19_Questionnaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19_Questionnaire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2300EC2744353900F03931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D2300EE2744353A00F03931 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				1D826A31274775350035ED82 /* DiagnosisViewController.swift */,
 				1D2300F02744353A00F03931 /* QuestionsViewController.swift */,
+				1D1D1956274DC7900004BCB1 /* SplashViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				1D2300F12744353A00F03931 /* QuestionsViewController.swift in Sources */,
 				1D826A32274775350035ED82 /* DiagnosisViewController.swift in Sources */,
 				1D7F975B27449FE700986A53 /* Question.swift in Sources */,
+				1D1D1957274DC7910004BCB1 /* SplashViewController.swift in Sources */,
 				1DFBE4512748D2E100E9C938 /* RiskLevel.swift in Sources */,
 				1D7F975F2744DE7400986A53 /* GradientView.swift in Sources */,
 				1D7F975D2744A36200986A53 /* QuestionnaireLogic.swift in Sources */,
