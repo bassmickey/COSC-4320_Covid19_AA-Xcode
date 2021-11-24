@@ -43,7 +43,11 @@ class QuestionsViewController: UIViewController {
             questionnaireLogic.computeDiagnosis()
             
             // segue to diagnosis screen
-            self.performSegue(withIdentifier: "goToDiagnosis", sender: self)
+            if questionnaireLogic.getRiskLevel() == "HIGH RISK" {
+                self.performSegue(withIdentifier: "goToHighRisk", sender: self)
+            } else {
+                self.performSegue(withIdentifier: "goToL_NoRisk", sender: self)
+            }
             
             // resets the questionnaire
             questionnaireLogic.resetQuestionnaire()
@@ -53,7 +57,13 @@ class QuestionsViewController: UIViewController {
     
     // prepares the next screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToDiagnosis" {
+        if segue.identifier == "goToHighRisk" {
+            let destinationVC = segue.destination as! DiagnosisViewController
+            destinationVC.riskLevel = questionnaireLogic.getRiskLevel()
+            destinationVC.color = questionnaireLogic.getRiskColor()
+        }
+        
+        if segue.identifier == "goToL_NoRisk" {
             let destinationVC = segue.destination as! DiagnosisViewController
             destinationVC.riskLevel = questionnaireLogic.getRiskLevel()
             destinationVC.color = questionnaireLogic.getRiskColor()
@@ -72,7 +82,7 @@ class QuestionsViewController: UIViewController {
     
     
     /// creates a custom view
-    /// - Parameter myView: gets the view 
+    /// - Parameter myView: gets the view
     func customeView(myView: UIView) {
         myView.layer.cornerRadius = 30
         myView.layer.masksToBounds = true
