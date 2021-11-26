@@ -87,7 +87,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     /// zoom in to the user's location and constraint the points of interest to a region
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         // center the screen around the user's coordinates
-        let region = MKCoordinateRegion(center: mapView.userLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03))
+        let region = MKCoordinateRegion(center: mapView.userLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         // plays an animation while zooming into the user's location
         mapView.setRegion(region, animated: true)
         
