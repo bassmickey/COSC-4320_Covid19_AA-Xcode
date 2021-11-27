@@ -149,9 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				1D826A31274775350035ED82 /* DiagnosisViewController.swift */,
+				1D1D1958274DEF3F0004BCB1 /* MapViewController.swift */,
 				1D2300F02744353A00F03931 /* QuestionsViewController.swift */,
 				1D1D1956274DC7900004BCB1 /* SplashViewController.swift */,
-				1D1D1958274DEF3F0004BCB1 /* MapViewController.swift */,
 				1D1D195E2750CA800004BCB1 /* WeatherViewController.swift */,
 			);
 			path = Controller;

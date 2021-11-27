@@ -55,7 +55,7 @@ class QuestionsViewController: UIViewController {
         }
     }
     
-    // prepares the next screen
+    /// prepares app to go to the next screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToHighRisk" {
             let destinationVC = segue.destination as! DiagnosisViewController
@@ -70,7 +70,7 @@ class QuestionsViewController: UIViewController {
         }
     }
     
-    // updates the UI
+    /// updates the UI
     @objc func updateUI() {
         // update the question
         questionLabel.text = questionnaireLogic.getQuestion()

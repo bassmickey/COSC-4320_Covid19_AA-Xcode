@@ -29,7 +29,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     /// dismisses the screen
     @IBAction func exitButtonPressed(_ sender: UIButton) {
-        // stop requesting user's location
+        // stop updating the user's location
         locationManager.stopUpdatingLocation()
         
         // dismisses the screen and goes back to the previous one

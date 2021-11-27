@@ -72,10 +72,12 @@ struct QuestionnaireLogic {
         }
     }
     
+    /// returns the risk level
     func getRiskLevel() -> String {
         return riskLevel?.risk ?? "null"
     }
     
+    /// changes the background color based on the risk
     func getRiskColor() -> UIColor {
         return riskLevel?.color ?? UIColor.white
     }
