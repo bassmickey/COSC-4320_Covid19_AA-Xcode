@@ -19,16 +19,23 @@ protocol PollenManagerDelegate {
 struct PollenManager {
     var delegate: PollenManagerDelegate?
     var semaphore = DispatchSemaphore (value: 0)
+    let pollenURL = "https://api.ambeedata.com/latest/pollen/"
     
-    let pollenURL = "https://api.ambeedata.com/latest/pollen/by-lat-lng?"
-    
+    /// builds the API URL based on coordinates
     func fetchPollen(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
-        let pollenUrlString = "\(pollenURL)lat=\(latitude)&lng=\(longitude)"
-        buildApiKey(with: pollenUrlString)
+        let urlString = "\(pollenURL)by-lat-lng?lat=\(latitude)&lng=\(longitude)"
+        buildApiKey(with: urlString)
     }
     
-    func buildApiKey(with pollenUrlString: String) {
-        var request = URLRequest(url: URL(string: pollenUrlString)!,timeoutInterval: Double.infinity)
+    /// builds the API URL based on a city name
+    func fetchPollen(cityName: String) {
+        let urlString = "\(pollenURL)by-place?place=\(cityName)"
+        buildApiKey(with: urlString)
+    }
+    
+    /// adds the key complying to REST protocols
+    func buildApiKey(with urlString: String) {
+        var request = URLRequest(url: URL(string: urlString)!,timeoutInterval: Double.infinity)
         
         request.addValue("84c4798cc1b2e91be46e8677ca80fc89f287fe3cd5cf1947970ceecd32d90a0c", forHTTPHeaderField: "x-api-key")
         
@@ -37,6 +44,7 @@ struct PollenManager {
         pollenPerformRequest(with: request)
     }
     
+    /// performs an API call
     func pollenPerformRequest(with request: URLRequest) {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if error != nil {
@@ -50,14 +58,17 @@ struct PollenManager {
                     delegate?.didUpdatePollen(self, pollen: pollen)
                 }
             }
-            //print(String(data: data, encoding: .utf8)!)
+            
             semaphore.signal()
         }
-        
         task.resume()
         semaphore.wait()
     }
     
+    
+    /// Extracts data from the JSON file
+    /// - Parameter pollenData: data being passed from the API call
+    /// - Returns: a PollenModel object
     func parseJSON(_ pollenData: Data) -> PollenModel? {
         let decoder = JSONDecoder()
         do {

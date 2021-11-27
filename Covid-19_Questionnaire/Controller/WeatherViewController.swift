@@ -13,6 +13,9 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var grassValueLabel: UILabel!
+    @IBOutlet weak var treeValueLabel: UILabel!
+    @IBOutlet weak var weedValueLabel: UILabel!
     
     var weatherManager = WeatherManager()
     var pollenManager = PollenManager()
@@ -60,6 +63,7 @@ extension WeatherViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let city = searchTextField.text {
             weatherManager.fetchWeather(cityName: city)
+            pollenManager.fetchPollen(cityName: city)
         }
         
         searchTextField.text = ""
@@ -88,9 +92,9 @@ extension WeatherViewController: WeatherManagerDelegate {
 extension WeatherViewController: PollenManagerDelegate {
     func didUpdatePollen(_ pollenManager: PollenManager, pollen: PollenModel) {
         DispatchQueue.main.async {
-            print(pollen.grass)
-            print(pollen.tree)
-            print(pollen.weed)
+            self.grassValueLabel.text = pollen.grass
+            self.treeValueLabel.text = pollen.tree
+            self.weedValueLabel.text = pollen.weed
         }
     }
     

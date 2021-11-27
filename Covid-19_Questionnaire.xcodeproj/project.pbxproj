@@ -78,8 +78,8 @@
 		1D1CCECD2751850A00737E52 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				1D1D19602750CD450004BCB1 /* WeatherManager.swift */,
 				1D1D19622750CD9A0004BCB1 /* WeatherData.swift */,
+				1D1D19602750CD450004BCB1 /* WeatherManager.swift */,
 				1D1D19642750CDD70004BCB1 /* WeatherModel.swift */,
 			);
 			path = Weather;

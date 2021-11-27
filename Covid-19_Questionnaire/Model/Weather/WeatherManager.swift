@@ -15,22 +15,23 @@ protocol WeatherManagerDelegate {
 
 struct WeatherManager {
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=540dae09659bdc3a3d5de761dbf92628&units=imperial"
-    
     var delegate: WeatherManagerDelegate?
     
+    /// build the API URL based on city names
     func fetchWeather(cityName: String) {
         let urlString = "\(weatherURL)&q=\(cityName)"
         performRequest(with: urlString)
     }
     
+    /// builds the API URL based on the user's coordinates
     func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
         performRequest(with: urlString)
     }
     
-    /// networks with JSON file
+    /// requests an API call
     func performRequest(with urlString: String) {
-        //1. create a URL
+        //1. create the API URL
         if let url = URL(string: urlString) {
             //2. create a URLSession
             let session = URLSession(configuration: .default)
@@ -53,7 +54,10 @@ struct WeatherManager {
         }
     }
     
-    /// gets parameters from the JSON file and builds a structure
+    
+    /// Extracts data from the JSON file
+    /// - Parameter weatherData: data passed by the API call
+    /// - Returns: a WeatherModel object
     func parseJSON(_ weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         do {
