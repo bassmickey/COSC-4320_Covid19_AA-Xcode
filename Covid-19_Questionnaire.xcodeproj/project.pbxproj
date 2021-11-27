@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D1CCED02751D61A00737E52 /* PollenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1CCECF2751D61A00737E52 /* PollenData.swift */; };
+		1D1CCED22751D70700737E52 /* PollenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1CCED12751D70700737E52 /* PollenManager.swift */; };
+		1D1CCED42751D7FA00737E52 /* PollenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1CCED32751D7FA00737E52 /* PollenModel.swift */; };
 		1D1D1957274DC7910004BCB1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D1956274DC7900004BCB1 /* SplashViewController.swift */; };
 		1D1D1959274DEF3F0004BCB1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D1958274DEF3F0004BCB1 /* MapViewController.swift */; };
 		1D1D195F2750CA800004BCB1 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D195E2750CA800004BCB1 /* WeatherViewController.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D1CCECF2751D61A00737E52 /* PollenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollenData.swift; sourceTree = "<group>"; };
+		1D1CCED12751D70700737E52 /* PollenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollenManager.swift; sourceTree = "<group>"; };
+		1D1CCED32751D7FA00737E52 /* PollenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollenModel.swift; sourceTree = "<group>"; };
 		1D1D1956274DC7900004BCB1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1D1D1958274DEF3F0004BCB1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1D1D195E2750CA800004BCB1 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +65,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D1CCECC2751747800737E52 /* Questionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F975A27449FE700986A53 /* Question.swift */,
+				1D7F975C2744A36200986A53 /* QuestionnaireLogic.swift */,
+				1DFBE4502748D2E100E9C938 /* RiskLevel.swift */,
+			);
+			path = Questionnaire;
+			sourceTree = "<group>";
+		};
+		1D1CCECD2751850A00737E52 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				1D1D19602750CD450004BCB1 /* WeatherManager.swift */,
+				1D1D19622750CD9A0004BCB1 /* WeatherData.swift */,
+				1D1D19642750CDD70004BCB1 /* WeatherModel.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		1D1CCECE2751B58500737E52 /* Pollen */ = {
+			isa = PBXGroup;
+			children = (
+				1D1CCECF2751D61A00737E52 /* PollenData.swift */,
+				1D1CCED12751D70700737E52 /* PollenManager.swift */,
+				1D1CCED32751D7FA00737E52 /* PollenModel.swift */,
+			);
+			path = Pollen;
+			sourceTree = "<group>";
+		};
 		1D2300E02744353900F03931 = {
 			isa = PBXGroup;
 			children = (
@@ -92,12 +128,9 @@
 		1D2301002744370900F03931 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1D7F975A27449FE700986A53 /* Question.swift */,
-				1D7F975C2744A36200986A53 /* QuestionnaireLogic.swift */,
-				1DFBE4502748D2E100E9C938 /* RiskLevel.swift */,
-				1D1D19602750CD450004BCB1 /* WeatherManager.swift */,
-				1D1D19622750CD9A0004BCB1 /* WeatherData.swift */,
-				1D1D19642750CDD70004BCB1 /* WeatherModel.swift */,
+				1D1CCECE2751B58500737E52 /* Pollen */,
+				1D1CCECD2751850A00737E52 /* Weather */,
+				1D1CCECC2751747800737E52 /* Questionnaire */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +231,7 @@
 				1D2300F12744353A00F03931 /* QuestionsViewController.swift in Sources */,
 				1D826A32274775350035ED82 /* DiagnosisViewController.swift in Sources */,
 				1D7F975B27449FE700986A53 /* Question.swift in Sources */,
+				1D1CCED22751D70700737E52 /* PollenManager.swift in Sources */,
 				1D1D1959274DEF3F0004BCB1 /* MapViewController.swift in Sources */,
 				1D1D1957274DC7910004BCB1 /* SplashViewController.swift in Sources */,
 				1DFBE4512748D2E100E9C938 /* RiskLevel.swift in Sources */,
@@ -205,10 +239,12 @@
 				1D7F975F2744DE7400986A53 /* GradientView.swift in Sources */,
 				1D7F975D2744A36200986A53 /* QuestionnaireLogic.swift in Sources */,
 				1D2300ED2744353900F03931 /* AppDelegate.swift in Sources */,
+				1D1CCED42751D7FA00737E52 /* PollenModel.swift in Sources */,
 				1D1D19652750CDD70004BCB1 /* WeatherModel.swift in Sources */,
 				1D2300EF2744353A00F03931 /* SceneDelegate.swift in Sources */,
 				1D1D195F2750CA800004BCB1 /* WeatherViewController.swift in Sources */,
 				1D1D19632750CD9A0004BCB1 /* WeatherData.swift in Sources */,
+				1D1CCED02751D61A00737E52 /* PollenData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
     var weatherManager = WeatherManager()
+    var pollenManager = PollenManager()
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ class WeatherViewController: UIViewController {
         locationManager.requestLocation() // gets user location one single time
         
         weatherManager.delegate = self
+        pollenManager.delegate = self
         searchTextField.delegate = self
     }
     
@@ -81,6 +83,22 @@ extension WeatherViewController: WeatherManagerDelegate {
     }
 }
 
+//MARK: - PollenManagerDelegate
+
+extension WeatherViewController: PollenManagerDelegate {
+    func didUpdatePollen(_ pollenManager: PollenManager, pollen: PollenModel) {
+        DispatchQueue.main.async {
+            print(pollen.grass)
+            print(pollen.tree)
+            print(pollen.weed)
+        }
+    }
+    
+    func pollenDidFailWithError(error: Error) {
+        print(error)
+    }
+}
+
 //MARK: - CLLocationManagerDelegate
 
 extension WeatherViewController: CLLocationManagerDelegate {
@@ -91,6 +109,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
             let lon = location.coordinate.longitude
             locationManager.stopUpdatingLocation()
             weatherManager.fetchWeather(latitude: lat, longitude: lon)
+            pollenManager.fetchPollen(latitude: lat, longitude: lon)
         }
     }
     
