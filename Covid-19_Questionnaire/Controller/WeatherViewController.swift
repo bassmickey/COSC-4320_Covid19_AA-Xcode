@@ -16,6 +16,8 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var grassValueLabel: UILabel!
     @IBOutlet weak var treeValueLabel: UILabel!
     @IBOutlet weak var weedValueLabel: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var spinnerView: UIView!
     
     var weatherManager = WeatherManager()
     var pollenManager = PollenManager()
@@ -26,8 +28,9 @@ class WeatherViewController: UIViewController {
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization() // request permission to get user location
-        locationManager.requestLocation() // gets user location one single time
         
+        locationManager.requestLocation() // gets user location one single time
+        startLoadingContent()
         weatherManager.delegate = self
         pollenManager.delegate = self
         searchTextField.delegate = self
@@ -35,6 +38,22 @@ class WeatherViewController: UIViewController {
     
     @IBAction func locationPressed(_ sender: UIButton) {
         locationManager.requestLocation()
+        startLoadingContent()
+    }
+    
+    /// Displays an activity indicator to let the user know content is being loaded
+    func startLoadingContent() {
+        spinner.startAnimating()
+        spinnerView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        spinner.hidesWhenStopped = false
+        spinnerView.isHidden = false
+    }
+    
+    /// removes the activity indicator from the screen
+    func stopLoadingContent() {
+        spinner.stopAnimating()
+        spinner.hidesWhenStopped = true
+        spinnerView.isHidden = true
     }
 }
 
@@ -114,6 +133,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
             locationManager.stopUpdatingLocation()
             weatherManager.fetchWeather(latitude: lat, longitude: lon)
             pollenManager.fetchPollen(latitude: lat, longitude: lon)
+            stopLoadingContent()
         }
     }
     

@@ -23,7 +23,7 @@ class QuestionsViewController: UIViewController {
         // updates UI on load
         updateUI()
         // view with rounded corners
-        customeView(myView: questionView)
+        customView(myView: questionView)
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
@@ -83,7 +83,7 @@ class QuestionsViewController: UIViewController {
     
     /// creates a custom view
     /// - Parameter myView: gets the view
-    func customeView(myView: UIView) {
+    func customView(myView: UIView) {
         myView.layer.cornerRadius = 30
         myView.layer.masksToBounds = true
     }

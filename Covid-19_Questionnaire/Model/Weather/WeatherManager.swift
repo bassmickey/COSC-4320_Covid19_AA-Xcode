@@ -31,6 +31,7 @@ struct WeatherManager {
     
     /// requests an API call
     func performRequest(with urlString: String) {
+        
         //1. create the API URL
         if let url = URL(string: urlString) {
             //2. create a URLSession
@@ -53,7 +54,6 @@ struct WeatherManager {
             task.resume()
         }
     }
-    
     
     /// Extracts data from the JSON file
     /// - Parameter weatherData: data passed by the API call

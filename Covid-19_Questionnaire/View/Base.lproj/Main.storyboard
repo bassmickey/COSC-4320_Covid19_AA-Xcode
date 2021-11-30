@@ -252,13 +252,29 @@
                                     <constraint firstItem="mj1-Vg-gce" firstAttribute="leading" secondItem="h1d-tN-cuq" secondAttribute="leading" id="v8R-W1-Gjm"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhC-5H-WVG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7R5-bW-MjK">
+                                        <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7R5-bW-MjK" firstAttribute="centerX" secondItem="FhC-5H-WVG" secondAttribute="centerX" id="7Bx-6P-PFh"/>
+                                    <constraint firstItem="7R5-bW-MjK" firstAttribute="centerY" secondItem="FhC-5H-WVG" secondAttribute="centerY" id="fbe-bv-mw4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mlf-Ng-Dhb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="FhC-5H-WVG" firstAttribute="top" secondItem="zJR-KR-wpa" secondAttribute="top" id="0Fq-pS-om0"/>
+                            <constraint firstAttribute="bottom" secondItem="FhC-5H-WVG" secondAttribute="bottom" id="1po-Fu-YQf"/>
                             <constraint firstItem="mlf-Ng-Dhb" firstAttribute="trailing" secondItem="h1d-tN-cuq" secondAttribute="trailing" constant="20" id="4Yf-S7-HDc"/>
                             <constraint firstItem="zZG-0M-7WK" firstAttribute="leading" secondItem="zJR-KR-wpa" secondAttribute="leading" id="4kP-p8-pVj"/>
                             <constraint firstAttribute="trailing" secondItem="zZG-0M-7WK" secondAttribute="trailing" id="6y1-uh-CIh"/>
+                            <constraint firstAttribute="trailing" secondItem="FhC-5H-WVG" secondAttribute="trailing" id="Ayn-rE-h96"/>
+                            <constraint firstItem="FhC-5H-WVG" firstAttribute="leading" secondItem="zJR-KR-wpa" secondAttribute="leading" id="KA8-w9-vRw"/>
                             <constraint firstItem="mlf-Ng-Dhb" firstAttribute="bottom" secondItem="h1d-tN-cuq" secondAttribute="bottom" id="XEf-lf-x1J"/>
                             <constraint firstItem="h1d-tN-cuq" firstAttribute="leading" secondItem="mlf-Ng-Dhb" secondAttribute="leading" constant="20" id="Z3z-os-ozw"/>
                             <constraint firstItem="zZG-0M-7WK" firstAttribute="top" secondItem="zJR-KR-wpa" secondAttribute="top" id="dpM-Sr-m2r"/>
@@ -272,6 +288,8 @@
                         <outlet property="conditionImageView" destination="czk-4d-3JR" id="6xO-Zs-M6R"/>
                         <outlet property="grassValueLabel" destination="8cE-zS-VBa" id="jXF-BZ-4Rq"/>
                         <outlet property="searchTextField" destination="mSn-7p-mSv" id="N1y-Uf-2H4"/>
+                        <outlet property="spinner" destination="7R5-bW-MjK" id="K1B-b3-c1A"/>
+                        <outlet property="spinnerView" destination="FhC-5H-WVG" id="sPg-I3-YlK"/>
                         <outlet property="temperatureLabel" destination="vAZ-at-ifA" id="4Vb-gP-bQu"/>
                         <outlet property="treeValueLabel" destination="Jxh-8d-kjd" id="L4f-hq-Ao2"/>
                         <outlet property="weedValueLabel" destination="sGD-z9-yzm" id="Ygh-D6-whL"/>
