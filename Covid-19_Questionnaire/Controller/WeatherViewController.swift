@@ -27,13 +27,18 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         
         locationManager.delegate = self
+        stopLoadingContent()
         locationManager.requestWhenInUseAuthorization() // request permission to get user location
         
-        locationManager.requestLocation() // gets user location one single time
-        startLoadingContent()
-        weatherManager.delegate = self
-        pollenManager.delegate = self
-        searchTextField.delegate = self
+        if CLLocationManager.locationServicesEnabled() {
+            if locationManager.authorizationStatus == .authorizedAlways || locationManager.authorizationStatus == .authorizedWhenInUse {
+                locationManager.requestLocation() // gets user location one single time
+                startLoadingContent()
+                weatherManager.delegate = self
+                pollenManager.delegate = self
+                searchTextField.delegate = self
+            }
+        }
     }
     
     @IBAction func locationPressed(_ sender: UIButton) {
